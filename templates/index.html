@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+    <h1>Smart Expense Tracker</h1>
+
+
+    <a href="/add">
+        <button>Add Expense</button>
+    </a>
+
+    <a href="/dashboard">
+        <button>Dashboard</button>
+    </a>
+
+
+    <h2>All Expenses</h2>
+
+
+    <table border="1">
+
+        <tr>
+            <th>Title</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Payment</th>
+            <th>Date</th>
+        </tr>
+
+
+        {% for expense in expenses %}
+
+        <tr>
+
+            <td>{{ expense.title }}</td>
+
+            <td>₹{{ expense.amount }}</td>
+
+            <td>{{ expense.category }}</td>
+
+            <td>{{ expense.payment }}</td>
+
+            <td>{{ expense.date }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+
+    </table>
+
+
+</body>
+</html>

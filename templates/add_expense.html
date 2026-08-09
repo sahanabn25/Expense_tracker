@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Add Expense</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+
+<h1>Add New Expense</h1>
+
+
+<form action="/add_expense" method="POST">
+
+
+    <label>Expense Title:</label>
+    <input type="text" name="title" required>
+
+    <br><br>
+
+
+    <label>Amount:</label>
+    <input type="number" name="amount" required>
+
+    <br><br>
+
+
+    <label>Category:</label>
+
+    <select name="category">
+
+        <option>Food</option>
+
+        <option>Travel</option>
+
+        <option>Shopping</option>
+
+        <option>Bills</option>
+
+        <option>Others</option>
+
+    </select>
+
+
+    <br><br>
+
+
+    <label>Payment Method:</label>
+
+    <select name="payment">
+
+        <option>UPI</option>
+
+        <option>Cash</option>
+
+        <option>Card</option>
+
+    </select>
+
+
+    <br><br>
+
+
+    <button type="submit">
+        Add Expense
+    </button>
+
+
+</form>
+
+
+<br>
+
+
+<a href="/">
+    Back to Home
+</a>
+
+
+</body>
+
+</html>

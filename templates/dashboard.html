@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <h1>Expense Dashboard</h1>
+
+    <h2>Total Expense by Category</h2>
+
+    <table border="1">
+        <tr>
+            <th>Category</th>
+            <th>Total Amount</th>
+        </tr>
+
+        {% for item in data %}
+        <tr>
+            <td>{{ item._id }}</td>
+            <td>₹{{ item.total }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <a href="/">
+        <button>Back to Home</button>
+    </a>
+
+</body>
+</html>
